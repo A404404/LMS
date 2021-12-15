@@ -1,6 +1,8 @@
 package com.collegeproject.LMS.data;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.collegeproject.LMS.data.LibraryContract.*;
@@ -30,7 +32,7 @@ public LibraryDbHelper(Context context){
                 +Lib_student.COLUMN_STUDENT_GENDER+ " TEXT ,"
                 +Lib_student.COLUMN_STUDENT_NUMBER+ " INTEGER ,"
                 +Lib_student.COLUMN_STUDENT_ADDRESS+ " TEXT ,"
-                +Lib_student.COLUMN_STUDENT_BOOKS + " INTEFER NOT NULL DEFAULT 0);";
+                +Lib_student.COLUMN_STUDENT_BOOKS + " INTEGER );";
 
         sqLiteDatabase.execSQL(SQL_CREATE_LIBRARY_TABLE_STUDENT);
 
@@ -42,12 +44,19 @@ public LibraryDbHelper(Context context){
             +Lib_books.COLUMN_BOOK_STATUS+ " INTEFER NOT NULL DEFAULT 0);" ;
 
     sqLiteDatabase.execSQL(SQL_CREATE_LIBRARY_TABLE_BOOKS);
+    }
 
-
+    public boolean updatedata(String id, String books) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Lib_student.COLUMN_STUDENT_BOOKS, books);
+        return db.update("Library_Student", contentValues, Lib_student._ID + " = ?", new String[]{id}) > 0;
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+Lib_student.TABLE_NAME);
+        onCreate(sqLiteDatabase);
 
     }
 }

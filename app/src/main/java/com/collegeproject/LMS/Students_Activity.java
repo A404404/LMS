@@ -7,7 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.collegeproject.LMS.data.LibraryDbHelper;
@@ -17,8 +19,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class Students_Activity extends AppCompatActivity {
-
-
 
     ArrayList<Student_arraylist> arraylists;
 
@@ -39,16 +39,11 @@ public class Students_Activity extends AppCompatActivity {
             }
         });
 
-
-
         displayDataBaseinfo();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        displayDataBaseinfo();
-    }
+
+
 
     public void displayDataBaseinfo(){
 
@@ -78,7 +73,6 @@ public class Students_Activity extends AppCompatActivity {
         );
 
 
-
         try {
             int idColumnIndex = cursor.getColumnIndex(Lib_student._ID);
             int nameColumnIndex = cursor.getColumnIndex(Lib_student.COLUMN_STUDENT_NAME);
@@ -103,7 +97,6 @@ public class Students_Activity extends AppCompatActivity {
 
             arraylists.add(new Student_arraylist(currentId,currentName,currentemail,currentage,
                     currentgender,currentnumber,currentaddress,currentbooks));
-
         }
 
             Student_Adapter itemsAdapter = new Student_Adapter(this,arraylists);
@@ -111,6 +104,18 @@ public class Students_Activity extends AppCompatActivity {
             ListView listView = findViewById(R.id.list);
 
             listView.setAdapter(itemsAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                  Intent intent = new Intent(Students_Activity.this,Individual_student.class);
+                  int yourInt = 10;
+                  intent.putExtra("yourIntName", i);
+                  startActivity(intent);
+                }
+            });
+
+
 
     }finally {
         cursor.close();

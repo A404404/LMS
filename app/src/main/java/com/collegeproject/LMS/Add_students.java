@@ -62,6 +62,5 @@ public class Add_students extends AppCompatActivity {
         long newRowId = db.insert(Lib_student.TABLE_NAME, null, values);
 
         finish();
-
     }
 }

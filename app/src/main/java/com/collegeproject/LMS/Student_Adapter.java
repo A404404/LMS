@@ -19,7 +19,6 @@ public class Student_Adapter extends ArrayAdapter<Student_arraylist> {
 
     }
 
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -34,25 +33,23 @@ public class Student_Adapter extends ArrayAdapter<Student_arraylist> {
 
         TextView Name = listItemView.findViewById(R.id.Name);
 
-        Name.append(currentstudent.getName());
+        Name.setText(currentstudent.getName());
 
         TextView DOB = listItemView.findViewById(R.id.DOB);
 
-        DOB.append(currentstudent.getAge());
+        DOB.setText(currentstudent.getAge());
 
         TextView Gender = listItemView.findViewById(R.id.gender);
 
-        Gender.append(currentstudent.getGender());
+        Gender.setText(currentstudent.getGender());
 
         TextView Phone = listItemView.findViewById(R.id.number);
 
-        Phone.append(currentstudent.getNumber());
+        Phone.setText(currentstudent.getNumber());
 
         TextView address = listItemView.findViewById(R.id.address);
 
-        address.append(currentstudent.getEmail());
-
-
+        address.setText(currentstudent.getBooks());
 
 
         return listItemView;

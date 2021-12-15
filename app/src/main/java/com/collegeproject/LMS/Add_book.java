@@ -57,9 +57,6 @@ public class Add_book extends AppCompatActivity {
 
         long newRowId = db.insert(Lib_books.TABLE_NAME, null, values);
 
-
-
         finish();
-
     }
 }

@@ -7,15 +7,17 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.collegeproject.LMS.data.LibraryDbHelper;
 import com.collegeproject.LMS.data.LibraryContract.Lib_books;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class All_books_activity extends AppCompatActivity {
 
-    TextView displayView;
+     ArrayList<Book_arraylist> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +25,8 @@ public class All_books_activity extends AppCompatActivity {
         setContentView(R.layout.all_books);
 
 
-//        if (bool){
-//            Toast.makeText(All_books_activity.this, "Came here from All books  Button ", Toast.LENGTH_SHORT).show();
-//        }else{
-//            Toast.makeText(All_books_activity.this, "Came here from Avaliable books buttons ", Toast.LENGTH_SHORT).show();
-//        }
+        arrayList = new ArrayList<>();
+
 
         FloatingActionButton fab = findViewById(R.id.Add_New_book);
 
@@ -38,16 +37,11 @@ public class All_books_activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-         displayView = findViewById(R.id.Books_View);
+
 
         displayDatabaseInfo();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        displayDatabaseInfo();
-    }
 
     private void displayDatabaseInfo(){
 
@@ -73,11 +67,7 @@ public class All_books_activity extends AppCompatActivity {
                 null
         );
 
-        displayView.setText(Lib_books._ID + " - " +
-                Lib_books.COLUMN_BOOK_NAME + " - " +
-                Lib_books.COLUMN_BOOK_AUTHOR + " - " +
-                Lib_books.COLUMN_BOOK_PRICE + " - " +
-                Lib_books.COLUMN_BOOK_STATUS);
+
 
         try {
 
@@ -95,10 +85,18 @@ public class All_books_activity extends AppCompatActivity {
                 String currentPrice = cursor.getString(PriceColuumIndex);
                 String currentStatus = cursor.getString(StatusColumnIndex);
 
-                displayView.append("\n "+currentId + " - " +currentName + " - "
-                +currentAuthor+ " - "+ currentPrice+ " - "+ currentStatus);
+               arrayList.add(new Book_arraylist(currentId,currentName,currentAuthor,
+                       currentPrice,currentStatus));
 
             }
+
+            Book_Adapter itemsAdapter = new Book_Adapter(this,arrayList);
+
+            ListView listView = findViewById(R.id.list_book);
+
+            listView.setAdapter(itemsAdapter);
+
+
         }finally {
             cursor.close();
         }

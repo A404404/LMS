@@ -9,8 +9,6 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    String Click_from;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +31,29 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,All_books_activity.class);
                 startActivity(intent);
+            }
+        });
+
+        LinearLayout about_us = findViewById(R.id.About_us);
+
+        about_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               Intent intent = new Intent(MainActivity.this,About_us.class );
+               startActivity(intent);
+            }
+        });
+
+        LinearLayout status = findViewById(R.id.Statatics);
+
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,Status.class);
+                startActivity(intent);
+
             }
         });
 

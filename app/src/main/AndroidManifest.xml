@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LMS">
         <activity
-            android:name=".View_list"
+            android:name=".Status"
+            android:exported="true" />
+        <activity
+            android:name=".Individual_student"
+            android:exported="true" />
+        <activity
+            android:name=".About_us"
             android:exported="true" />
         <activity
             android:name=".Add_students"

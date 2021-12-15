@@ -4,20 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/about_us.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_add_book.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_add_students.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_all_books.xml" value="0.2610062893081761" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_status.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_students.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/activity_view_list.xml" value="0.278125" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/add_book.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/add_element.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/add_student.xml" value="0.278125" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/add_students.xml" value="0.2773237997957099" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/all_books.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/book_listview.xml" value="0.23125" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/individual_student.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/main.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/student_listview.xml" value="0.2828125" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/students.xml" value="0.2828125" />
         <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/view_list.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/Adil/Downloads/LMS2/app/src/main/res/layout/which_book_taken.xml" value="0.2864583333333333" />
       </map>
     </option>
   </component>

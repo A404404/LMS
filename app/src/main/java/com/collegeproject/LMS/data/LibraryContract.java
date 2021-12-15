@@ -15,9 +15,6 @@ public class LibraryContract {
         public final static String COLUMN_BOOK_AUTHOR = "author";
         public final static String COLUMN_BOOK_PRICE = "price";
         public final static String COLUMN_BOOK_STATUS = "status";
-
-        public static final int STATUS_HAI = 0;
-        public static final int STATUS_KOI_LEKE_GAYA = 1;
     }
 
     public static final class Lib_student implements BaseColumns{
@@ -30,7 +27,6 @@ public class LibraryContract {
         public final static String COLUMN_STUDENT_EMAIL = "email";
         public final static String COLUMN_STUDENT_AGE = "age";
         public final static String COLUMN_STUDENT_GENDER = "gender";
-//        public final static String COLUMN_STUDENT_CLASS = "class";
         public final static String COLUMN_STUDENT_NUMBER = "number";
         public final static String COLUMN_STUDENT_ADDRESS = "address";
         public final static String COLUMN_STUDENT_BOOKS = "books";

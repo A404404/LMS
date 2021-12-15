@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".All_books_activity">
 
-    <TextView
-        android:id="@+id/Books_View"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Add_New_book"
         android:layout_width="wrap_content"
@@ -28,4 +19,14 @@
         app:layout_constraintVertical_bias="0.97"
         app:maxImageSize="50dp"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ListView
+        android:id="@+id/list_book"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

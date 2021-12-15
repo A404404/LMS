@@ -34,7 +34,8 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="213dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/pic4"
+                    tools:srcCompat="@drawable/pic4" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -57,7 +58,8 @@
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
                     android:layout_height="214dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/pic3"
+                    tools:srcCompat="@drawable/pic3" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -88,7 +90,8 @@
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
                     android:layout_height="213dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/pic1"
+                    tools:srcCompat="@drawable/pic1" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -110,7 +113,8 @@
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="213dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/pic2"
+                    tools:srcCompat="@drawable/pic2" />
 
                 <TextView
                     android:id="@+id/textView4"
